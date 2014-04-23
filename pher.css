@@ -1,0 +1,238 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    width: 720px;
+    height: 680px;
+    top: 50%;
+    left: 50%;
+    margin-top: -340px;
+    margin-left: -360px;
+    z-index: 1000;
+    display: none;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
+.heart img{
+    -webkit-animation: beat 1s infinite linear;
+    -moz-animation: beat 1s infinite linear;
+    animation: beat 1s infinite linear;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    width: 720px;
+    height: 680px;
+    top: 50%;
+    left: 50%;
+    margin-top: -340px;
+    margin-left: -360px;
+    display: block;
+    z-index: 1000;
+    position:absolute;
+}
+
+.heart #message {
+    width: 720px;
+    height: 680px;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -360px;
+    position:absolute;
+    z-index:1001;
+}
+.heart p {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+#elapseClock {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+    color: #FFFF00;
+}
+
+.diver {
+    background: url("img/diver.png") no-repeat 0 0;
+    background-size: 400px 200px;
+    width: 400px;
+    height: 200px;
+    -webkit-animation: diverMove 15s infinite linear;
+    -moz-animation: diverMove 15s infinite linear;
+    animation: diverMove 15s infinite linear;
+    z-index: 20;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+}
+
+.fish1, .fish2, .fish3, .fish4, .dolphin, .crab, .turtle, .octopus, .starfish {
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    -moz-transition: -moz-transform 2s ease-in-out;
+    -o-transition: -o-transform 2s ease-in-out;
+    -ms-transition: -ms-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+
+.lilheart {
+    -webkit-animation: beat 1s infinite linear;
+    -moz-animation: beat 1s infinite linear;
+    animation: beat 1s infinite linear;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+
+.fish1:hover, .fish2:hover, .dolphin:hover, .crab:hover, .lilheart:hover{
+  -webkit-transform: rotate(1440deg) scale(1.2);
+  -moz-transform: rotate(1440deg) scale(1.2);
+  transform: rotate(1440deg) scale(1.2);
+}
+
+.fish3:hover, .fish4:hover, .turtle:hover, .octopus:hover, .starfish:hover {
+  -webkit-transform: rotate(-1440deg) scale(1.2);
+  -moz-transform: rotate(-1440deg) scale(1.2);
+  transform: rotate(-1440deg) scale(1.2);
+}
+
+.fish1 {
+    background: url("img/1.gif") no-repeat 0 0;
+    background-size: 233px 339px;
+    width: 233px;
+    height: 339px;
+    top: 110%;
+    left: 60%;
+}
+
+.fish2 {
+    background: url("img/2.gif") no-repeat 0 0;
+    background-size: 186px 184px;
+    width: 186px;
+    height: 184px;
+    top: 50%;
+    left: 110%;
+}
+
+.fish3 {
+    background: url("img/3.gif") no-repeat 0 0;
+    background-size: 219px 127px;
+    width: 219px;
+    height: 127px;
+    top: 60%;
+    left: -10%;
+}
+
+.fish4 {
+    background: url("img/4.png") no-repeat 0 0;
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    top: -10%;
+    left: 30%;
+}
+
+.dolphin {
+    background: url("img/dolphin.png") no-repeat 0 0;
+    background-size: 250px 120px;
+    width: 250px;
+    height: 128px;
+    top: 40%;
+    left: 110%;
+}
+
+.crab {
+    background: url("img/crab.png") no-repeat 0 0;
+    background-size: 229px 173px;
+    width: 229px;
+    height: 173px;
+    top: 110%;
+    left: 20%;
+}
+
+.octopus {
+    background: url("img/octopus.png") no-repeat 0 0;
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    top: -10%;
+    left: -10%;
+}
+
+.starfish {
+    background: url("img/starfish.png") no-repeat 0 0;
+    background-size: 300px 288px;
+    width: 300px;
+    height: 288px;
+    top: -10%;
+    left: 110%;
+}
+
+.turtle {
+    background: url("img/turtle.png") no-repeat 0 0;
+    background-size: 249px 180px;
+    width: 249px;
+    height: 180px;
+    top: 20%;
+    left: -10%;
+}
+
+.lilheart {
+    background: url("img/heart_red.png") no-repeat 0 0;
+    background-size: 133px 116px;
+    width: 133px;
+    height: 116px;
+    bottom: 1%;
+    left: 5%;
+}
+
+@-moz-keyframes diverMove {
+        0%      {-moz-transform: rotate(0deg);left:25%;}
+        25%     {-moz-transform: rotate(20deg);left:50%;}
+        50%     {-moz-transform: rotate(0deg);left:80%;}
+        55%     {-moz-transform: rotate(-20deg);left:70%;}
+        70%     {-moz-transform: rotate(0deg);left:50%;}
+        80%     {-moz-transform: rotate(-360deg);left:25%;}
+        100%    {-moz-transform: rotate(0deg);left:25%;}
+
+}
+
+@-webkit-keyframes diverMove {
+        0%      {-webkit-transform: rotate(0deg);left:25;}
+        25%     {-webkit-transform: rotate(20deg);left:50%;}
+        50%     {-webkit-transform: rotate(0deg);left:80%;}
+        55%     {-webkit-transform: rotate(-20deg);left:70%;}
+        70%     {-webkit-transform: rotate(0deg);left:50%;}
+        80%    {-webkit-transform: rotate(-360deg);left:25%;}
+        100%    {-moz-transform: rotate(0deg);left:25%;}
+}
+
+@keyframes beat {
+    0% {transform: scale(1.05, 1.05);}
+    50% {transform: scale(1.1, 1.1);}
+    100% {transform: scale(1.05, 1.05);}
+}
+
+@-webkit-keyframes beat {
+    0% {-webkit-transform: scale(1.05, 1.05);}
+    50% {-webkit-transform: scale(1.1, 1.1);}
+    100% {-webkit-transform: scale(1.05, 1.05);}
+}
+
+@-moz-keyframes beat {
+    0% {-moz-transform: scale(1.05, 1.05);}
+    50% {-moz-transform: scale(1.1, 1.1);}
+    100% {-moz-transform: scale(1.05, 1.05);}
+}
