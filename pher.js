@@ -7,7 +7,7 @@ var sqr = function(x) {
 var s = $(".shark");
 
 var together = new Date();
-        together.setFullYear(2012, 5, 8);
+        together.setFullYear(2012, 4, 8);
         together.setHours(15);
         together.setMinutes(0);
         together.setSeconds(0);
